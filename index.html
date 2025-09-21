@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartXpress Innovation LTD</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="https://drive.google.com/uc?export=view&id=1qMkLlGt2D1E8MgkBhlMDmESqubaRcJu9" 
-           alt="SmartXpress Innovation LTD logo" width="120">
-    </div>
-    <nav>
-      <ul>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="images/logo.png" alt="SmartXpress Logo">
+  </div>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="SmartXpress Logo">
+      </div>
+      <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -24,38 +27,37 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Driving Innovation, Connecting Opportunities</h1>
-    <p>SmartXpress Innovation LTD empowers businesses with smart, scalable solutions in Tech, Logistics, Finance, and Real Estate.</p>
-    <a href="about.html" class="btn">Learn More</a>
+    <h1>Welcome to <span>SmartXpress Innovation LTD</span></h1>
+    <p>Driving Innovation, Connecting Opportunities</p>
+    <button class="cta-btn">Explore More</button>
   </section>
 
-  <!-- Showcase -->
+  <!-- Showcase Images -->
   <section class="showcase">
     <h2>Our Innovations</h2>
-    <div class="grid">
-      <div class="card fade-in">
-        <img src="https://drive.google.com/uc?export=view&id=1A9qUr6aHQp_HF5aysS-_ah0G2ZkwvK7I" 
-             alt="SmartXpress Innovative device" width="300">
-        <p>AI-powered device for car fault detection in seconds.</p>
+    <div class="showcase-grid">
+      <div class="showcase-item">
+        <img src="images/car_ai.png" alt="AI Device for Car Faults Detection">
+        <p>AI-Powered Car Fault Detection Device</p>
       </div>
-      <div class="card fade-in">
-        <img src="https://drive.google.com/uc?export=view&id=1og1zpEiJUjPrcHPHDXMB_PDwPWCIYbsb" 
-             alt="AgriLink360 IoTMonitor device" width="300">
-        <p>Agrilink360 IoTMonitor – connecting farmers to buyers.</p>
+      <div class="showcase-item">
+        <img src="images/agrilink.png" alt="Agrilink360 App">
+        <p>Agrilink360 App – Connecting Farmers and Buyers</p>
       </div>
-      <div class="card fade-in">
-        <img src="https://drive.google.com/uc?export=view&id=1IPNvlCHmZhEX_ApSgEX9hJDpiBb1H9Ms" 
-             alt="My image" width="300">
-        <p>Meet our Founder, <strong>Happy Igho Umukoro</strong>.</p>
+      <div class="showcase-item">
+        <img src="images/founder.jpg" alt="Happy Igho Umukoro">
+        <p>Founder: Happy Igho Umukoro</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 SmartXpress Innovation LTD. All Rights Reserved.</p>
+    <p>&copy; 2025 SmartXpress Innovation LTD. All rights reserved.</p>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
