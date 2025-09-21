@@ -7,45 +7,37 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <img src="images/logo.png" alt="SmartXpress Logo">
-  </div>
-
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/logo.png" alt="SmartXpress Logo">
-      </div>
+  <header class="navbar">
+    <img src="images/logo.png" alt="SmartXpress Logo" class="logo">
+    <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
+      <div class="hamburger">&#9776;</div>
     </nav>
   </header>
 
-  <!-- Contact Form -->
-  <section class="content">
+  <section class="content fade-in">
     <h1>Contact Us</h1>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/2349020779297" target="_blank">+234 902 077 9297</a></p>
+    <p><strong>Email:</strong> <a href="mailto:smartxpress74@gmail.com">smartxpress74@gmail.com</a></p>
+
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
-
-    <div class="contact-info">
-      <p><strong>WhatsApp:</strong> +2349020779297</p>
-      <p><strong>Email:</strong> smartxpress74@gmail.com</p>
-    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 SmartXpress Innovation LTD</p>
   </footer>
+
   <script src="js/script.js"></script>
 </body>
 </html>
+
