@@ -4,21 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - SmartXpress Innovation LTD</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-  <!-- Preloader -->
-  <div id="preloader">
-    <img src="images/logo.png" alt="SmartXpress Logo">
-  </div>
-
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/logo.png" alt="SmartXpress Logo">
-      </div>
-      <ul class="nav-links">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://drive.google.com/uc?export=view&id=1qMkLlGt2D1E8MgkBhlMDmESqubaRcJu9" 
+           alt="SmartXpress Innovation LTD logo" width="120">
+    </div>
+    <nav>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -30,22 +27,18 @@
   <!-- Contact Form -->
   <section class="content">
     <h1>Contact Us</h1>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
+    <form id="contactForm" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-
-    <div class="contact-info">
-      <p><strong>WhatsApp:</strong> +2349020779297</p>
-      <p><strong>Email:</strong> smartxpress74@gmail.com</p>
-    </div>
+    <div id="form-status"></div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 SmartXpress Innovation LTD</p>
   </footer>
-  <script src="js/script.js"></script>
 </body>
 </html>
