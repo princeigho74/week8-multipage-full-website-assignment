@@ -1,15 +1,36 @@
-// Preloader
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  preloader.classList.add("hidden");
-});
+// Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar nav');
 
-// Contact Form Validation
-const form = document.querySelector(".contact-form");
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('open');
+  });
+}
+
+// Contact Form - Google Apps Script
+const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener("submit", function (e) {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert("Thank you for contacting SmartXpress Innovation LTD!");
-    form.reset();
+    const status = document.getElementById('form-status');
+    status.textContent = "Sending...";
+
+    try {
+      const response = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+        method: "POST",
+        body: new FormData(form)
+      });
+
+      if (response.ok) {
+        status.textContent = "Message sent successfully!";
+        form.reset();
+      } else {
+        status.textContent = "Failed to send. Try again.";
+      }
+    } catch (error) {
+      status.textContent = "Error: " + error.message;
+    }
   });
 }
