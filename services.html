@@ -5,10 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - SmartXpress Innovation LTD</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Content section */
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .content h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .content ul {
+      list-style: none;
+      padding: 0;
+    }
+    .content li {
+      margin: 10px 0;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Showcase / Services */
+    .showcase {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .showcase h2 {
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .card {
+      background: #f8f8f8;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Tablet view: 2 columns */
+    @media (min-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop view: 3 columns */
+    @media (min-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #fff;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header class="navbar">
-    <img src="images/logo.png" alt="SmartXpress Logo" class="logo">
+    <img src="https://github.com/princeigho74/images/raw/main/mycompanylogo.png" 
+         alt="SmartXpress Logo" class="logo">
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -20,14 +100,40 @@
     </nav>
   </header>
 
+  <!-- Subsidiaries -->
   <section class="content slide-up">
     <h1>Our Subsidiaries</h1>
     <ul>
       <li><strong>SmartXpress Tech:</strong> Software, Apps, Digital Training</li>
+      
       <li><strong>SmartXpress Logistics:</strong> Vehicle Hiring, Dispatch, Data Reselling</li>
+      
       <li><strong>SmartXpress Finance:</strong> Fintech, Payments, AI Blockchain</li>
+      
       <li><strong>SmartXpress Real Estate:</strong> e-Rooms, Apartments, Smart Solutions</li>
     </ul>
+  </section>
+
+  <!-- Services with images -->
+  <section class="showcase slide-up">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://github.com/princeigho74/images/raw/main/419a27c026391cf_file_0000000094086243ab055dcc588f8dff_wm%20(2).png" 
+             alt="IoT Device">
+        <p>IoT Solutions</p>
+      </div>
+      <div class="card">
+        <img src="https://github.com/princeigho74/images/raw/main/smartxpress%20device.png" 
+             alt="Car Faults Detector">
+        <p>AI-powered Car Fault Detection Device</p>
+      </div>
+      <div class="card">
+        <img src="https://github.com/princeigho74/images/raw/main/my%20pic.jpg" 
+             alt="CEO - Happy Igho Umukoro">
+        <p>Happy Igho Umukoro – Founder & CEO</p>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -37,4 +143,5 @@
   <script src="js/script.js"></script>
 </body>
 </html>
+
 
