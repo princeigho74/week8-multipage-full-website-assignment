@@ -6,39 +6,92 @@
   <title>Services - SmartXpress Innovation LTD</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    /* Content section */
+    /* General Content */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar .logo {
+      width: 60px;
+      height: auto;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom: 2px solid #1E90FF;
+    }
+
+    /* Content Section */
     .content {
       padding: 40px 20px;
       max-width: 900px;
       margin: 0 auto;
     }
+
     .content h1 {
       text-align: center;
       margin-bottom: 20px;
     }
+
     .content ul {
       list-style: none;
       padding: 0;
     }
+
     .content li {
       margin: 10px 0;
       font-size: 18px;
       line-height: 1.6;
     }
 
-    /* Showcase / Services */
+    /* Services Showcase */
     .showcase {
       padding: 40px 20px;
       text-align: center;
     }
+
     .showcase h2 {
       margin-bottom: 20px;
     }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
     }
+
     .card {
       background: #f8f8f8;
       padding: 15px;
@@ -46,10 +99,12 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     }
+
     .card img {
       width: 100%;
       height: auto;
@@ -57,8 +112,14 @@
       margin-bottom: 10px;
       transition: transform 0.3s ease;
     }
+
     .card img:hover {
       transform: scale(1.05);
+    }
+
+    .card p {
+      font-weight: bold;
+      color: #333;
     }
 
     /* Tablet view: 2 columns */
@@ -73,6 +134,22 @@
       .grid {
         grid-template-columns: repeat(3, 1fr);
       }
+    }
+
+    /* Download button */
+    .download-btn {
+      display: inline-block;
+      padding: 15px 25px;
+      background: #1E90FF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .download-btn:hover {
+      background: #0b60c3;
     }
 
     footer {
@@ -96,12 +173,11 @@
         <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="hamburger">&#9776;</div>
     </nav>
   </header>
 
   <!-- Subsidiaries -->
-  <section class="content slide-up">
+  <section class="content">
     <h1>Our Subsidiaries</h1>
     <ul>
       <li><strong>SmartXpress Tech:</strong> Software, Apps, Digital Training</li>
@@ -115,7 +191,7 @@
   </section>
 
   <!-- Services with images -->
-  <section class="showcase slide-up">
+  <section class="showcase">
     <h2>Our Services</h2>
     <div class="grid">
       <div class="card">
@@ -128,46 +204,28 @@
              alt="Car Faults Detector">
         <p>AI-powered Car Fault Detection Device</p>
       </div>
-      <!-- Services / Showcase -->
-<section class="showcase slide-up">
-  <h2 style="text-align:center; margin-bottom:20px;">Our Services</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://github.com/princeigho74/images/raw/main/419a27c026391cf_file_0000000094086243ab055dcc588f8dff_wm%20(2).png" 
-           alt="IoT Device">
-      <p>IoT Solutions</p>
-    </div>
-    <div class="card">
-      <img src="https://github.com/princeigho74/images/raw/main/smartxpress%20device.png" 
-           alt="Car Faults Detector">
-      <p>AI-powered Car Fault Detection Device</p>
-    </div>
-    <div class="card">
-      <img src="https://github.com/princeigho74/images/raw/main/my%20pic.jpg" 
-           alt="CEO - Happy Igho Umukoro">
-      <p>Happy Igho Umukoro – Founder & CEO</p>
-    </div>
-  </div>
-  <!-- Embed Agrilink360 Canva Project -->
-  <h2 style="text-align:center; margin-top:40px; margin-bottom:20px;">Agrilink360 Project</h2>
-  <div style="text-align:center;">
-    <iframe src="https://www.canva.com/design/DAGx3y-aFoY/CtsAqI2vWOwo24tsKaK5Xw/view?utm_content=DAGx3y-aFoY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            width="80%" height="600" frameborder="0" allowfullscreen="true" allow="fullscreen"></iframe>
-  </div>
       <div class="card">
         <img src="https://github.com/princeigho74/images/raw/main/my%20pic.jpg" 
              alt="CEO - Happy Igho Umukoro">
         <p>Happy Igho Umukoro – Founder & CEO</p>
       </div>
     </div>
+
+    <!-- Agrilink360 Project Download -->
+    <h2 style="text-align:center; margin-top:40px; margin-bottom:20px;">Agrilink360 Project</h2>
+    <div style="text-align:center;">
+      <a href="https://github.com/princeigho74/images/raw/main/AgriLink360%20Smart%20Farming%20for%20Zero%20Hunger%20Tagline%20%E2%80%9CReducing%20waste%2C%20feeding%20communities.%E2%80%9D.zip" 
+         target="_blank" class="download-btn">
+        Download Agrilink360 Project
+      </a>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 SmartXpress Innovation LTD</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
