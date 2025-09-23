@@ -6,12 +6,25 @@
   <title>SmartXpress Innovation LTD</title>
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    /* Make welcome text bold and centered */
+    /* Rainbow animated welcome text */
+    @keyframes rainbow-text {
+      0% { color: #FF0000; }
+      14% { color: #FF7F00; }
+      28% { color: #FFFF00; }
+      42% { color: #00FF00; }
+      57% { color: #0000FF; }
+      71% { color: #4B0082; }
+      85% { color: #8F00FF; }
+      100% { color: #FF0000; }
+    }
+
     .welcome {
       text-align: center;
-      font-size: 28px;
+      font-size: 50px;
       font-weight: bold;
       margin-top: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      animation: rainbow-text 5s infinite linear;
     }
 
     /* Swing animation for logo */
@@ -23,18 +36,47 @@
       100% { transform: rotate(0deg); }
     }
 
+    /* Rainbow colour animation for logo */
+    @keyframes rainbow-logo {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
     .swing-logo {
       display: block;
       margin: 20px auto;
-      width: 150px;
-      animation: swing 3s infinite;
+      width: 180px;
+      animation: swing 3s infinite ease-in-out, rainbow-logo 5s infinite linear;
     }
 
     /* Service images formatting */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      text-align: center;
+    }
+
     .card img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
+      max-width: 250px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card img:hover {
+      transform: scale(1.05);
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
     }
   </style>
 </head>
@@ -62,7 +104,7 @@
        alt="Swinging Logo" class="swing-logo">
 
   <!-- Hero -->
-  <section class="hero fade-in">
+  <section class="hero fade-in" style="text-align: center; margin: 30px 0;">
     <h1>Driving Innovation, Connecting Opportunities</h1>
     <p>Smart digital solutions for Tech, Logistics, Finance, and Real Estate.</p>
     <a href="about.html" class="btn">Learn More</a>
@@ -70,7 +112,7 @@
 
   <!-- Showcase / Services -->
   <section class="showcase slide-up">
-    <h2>Our Services</h2>
+    <h2 style="text-align:center; margin-bottom:20px;">Our Services</h2>
     <div class="grid">
       <div class="card">
         <img src="https://github.com/princeigho74/images/raw/main/419a27c026391cf_file_0000000094086243ab055dcc588f8dff_wm%20(2).png" 
@@ -90,10 +132,9 @@
     </div>
   </section>
 
-  <footer>
+  <footer style="text-align:center; padding:20px; background:#f5f5f5; margin-top:30px;">
     <p>&copy; 2025 SmartXpress Innovation LTD</p>
   </footer>
 </body>
 </html>
-
 
