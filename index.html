@@ -5,11 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartXpress Innovation LTD</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Make welcome text bold and centered */
+    .welcome {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    /* Swing animation for logo */
+    @keyframes swing {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .swing-logo {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+      animation: swing 3s infinite;
+    }
+
+    /* Service images formatting */
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
-    <img src="images/logo.png" alt="SmartXpress Logo" class="logo">
+    <img src="https://github.com/princeigho74/images/raw/main/mycompanylogo.png" 
+         alt="SmartXpress Logo" class="logo">
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -21,6 +54,13 @@
     </nav>
   </header>
 
+  <!-- Welcome text + animated logo -->
+  <div class="welcome">
+    WELCOME TO SMARTXPRESS INNOVATION LTD
+  </div>
+  <img src="https://github.com/princeigho74/images/raw/main/mycompanylogo.png" 
+       alt="Swinging Logo" class="swing-logo">
+
   <!-- Hero -->
   <section class="hero fade-in">
     <h1>Driving Innovation, Connecting Opportunities</h1>
@@ -28,25 +68,32 @@
     <a href="about.html" class="btn">Learn More</a>
   </section>
 
-  <!-- Showcase -->
+  <!-- Showcase / Services -->
   <section class="showcase slide-up">
-    <h2>Our Innovations</h2>
+    <h2>Our Services</h2>
     <div class="grid">
       <div class="card">
-        <img src="images/car-device.png" alt="AI Car Device">
+        <img src="https://github.com/princeigho74/images/raw/main/419a27c026391cf_file_0000000094086243ab055dcc588f8dff_wm%20(2).png" 
+             alt="IoT Device">
+        <p>IoT Solutions</p>
+      </div>
+      <div class="card">
+        <img src="https://github.com/princeigho74/images/raw/main/smartxpress%20device.png" 
+             alt="Car Faults Detector">
         <p>AI-powered Car Fault Detection Device</p>
       </div>
       <div class="card">
-        <img src="images/agrilink360.png" alt="Agrilink360">
-        <p>Agrilink360 App – Connecting Farmers to Buyers</p>
-      </div>
-      <div class="card">
-        <img src="images/happy-igho.png" alt="Happy Igho Umukoro">
+        <img src="https://github.com/princeigho74/images/raw/main/my%20pic.jpg" 
+             alt="CEO - Happy Igho Umukoro">
         <p>Happy Igho Umukoro – Founder & CEO</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 202
+    <p>&copy; 2025 SmartXpress Innovation LTD</p>
+  </footer>
+</body>
+</html>
+
 
